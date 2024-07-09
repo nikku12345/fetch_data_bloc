@@ -44,7 +44,7 @@ class DatabaseHelper {
   Future<List<Repository>> getRepositories() async {
     final db = await database;
     final List<Map<String, dynamic>> maps = await db.query('repositories');
-    print("get repositories works");
+   // print("get repositories works");
     return List.generate(maps.length, (i) {
       return Repository.fromJson(maps[i]);
     });

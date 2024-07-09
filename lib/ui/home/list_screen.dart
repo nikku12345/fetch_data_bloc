@@ -1,5 +1,6 @@
 import 'package:assignment_task/app_config.dart';
 import 'package:assignment_task/bloc/home/home_bloc.dart';
+import 'package:assignment_task/common/text_style.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:url_launcher/url_launcher.dart';
@@ -50,18 +51,12 @@ class RepositoryListScreen extends StatelessWidget {
                           children: [
                             Text(
                               repo.name,
-                              style: const TextStyle(
-                                fontSize: 18,
-                                fontWeight: FontWeight.bold,
-                              ),
+                              style: AppTextStyles.headline,
                             ),
                             const SizedBox(height: 8),
                             Text(
                               repo.description ?? 'No description',
-                              style: TextStyle(
-                                fontSize: 14,
-                                color: Colors.grey[600],
-                              ),
+                              style: AppTextStyles.bodyText1,
                             ),
                             const SizedBox(height: 8),
                             Row(
@@ -77,9 +72,7 @@ class RepositoryListScreen extends StatelessWidget {
                                     const SizedBox(width: 4),
                                     Text(
                                       '${repo.stargazersCount}',
-                                      style: const TextStyle(
-                                        fontSize: 14,
-                                      ),
+                                      style:AppTextStyles.bodyText2
                                     ),
                                   ],
                                 ),
